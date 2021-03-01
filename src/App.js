@@ -1,13 +1,15 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import GlobalStyles from "./components/GlobalStyles";
 import Root from "./routes/Root";
-import Detail from "./routes/Detail";
+import Android from "./routes/Android";
+import Server from "./routes/Server";
 
 function App() {
   return (
     <Router>
       <Route exact path="/" component={Root} />
-      <Route path="/detail" component={Detail} />
+      <Route path="/android" component={Android} />
+      <Route path="/server" component={Server} />
       <GlobalStyles />
     </Router>
   );
