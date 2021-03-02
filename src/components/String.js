@@ -34,7 +34,7 @@ function String() {
       <SSection>
         <DescBox
           style={{
-            marginLeft: "1.25rem",
+            marginLeft: "20px",
             width:
               size.width > size.height
                 ? `${size.width * 0.4}px`
@@ -163,7 +163,7 @@ const SDSection = styled.section`
 
 const SDescBox = styled.div`
   min-height: 200px;
-  padding: 0 0 0 1.25rem;
+  padding: 0 20px;
   & > p {
     position: relative;
     top: 100px;

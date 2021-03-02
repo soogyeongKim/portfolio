@@ -20,7 +20,7 @@ function Xsync(props) {
           <Neon>안드로이드 개발, 앱 제작 및 배포</Neon>
           <br />
           <br />
-          <span>프로젝트 참여도</span>
+          프로젝트 참여도
           <br />
           50%
         </Desc>
