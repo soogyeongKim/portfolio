@@ -4,6 +4,7 @@ import Root from "./routes/Root";
 import Android from "./routes/Android";
 import Server from "./routes/Server";
 import Vue from "./routes/Vue";
+import Reactjs from "./routes/Reactjs";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path="/android" component={Android} />
       <Route path="/server" component={Server} />
       <Route path="/vue" component={Vue} />
+      <Route path="/react" component={Reactjs} />
       <GlobalStyles />
     </Router>
   );

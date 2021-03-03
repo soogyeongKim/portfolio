@@ -23,7 +23,7 @@ const globalStyles = createGlobalStyle`
         font-size: 2rem;
         font-weight: lighter;
     }
-    p{
+    p,ul,li{
         font-size: 1rem;
         line-height: 2;
     }

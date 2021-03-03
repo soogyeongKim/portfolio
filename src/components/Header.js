@@ -55,8 +55,6 @@ const HeaderContainer = styled.header`
   font-weight: bold;
   z-index: 10;
   background-color: transparent;
-  }};
-  transition: background-color 0.9s ease-in-out;
 
   @media only screen and (max-width: 768px) {
     height: 45px;

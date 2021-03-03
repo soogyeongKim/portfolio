@@ -17,7 +17,7 @@ function SKnights(props) {
             <br />
             담당 업무
             <br />
-            iOS/안드로이드 서브개발, 앱 제작 및 배포, 앱 사후관리 담당 업무
+            iOS/안드로이드 서브개발, 앱 제작 및 배포, 앱 사후관리
           </Desc>
           <Desc style={{ textAlign: "left" }}>
             SK 나이츠의 농구경기 어플리케이션으로 농구경기 진행 시 다양한 이벤트

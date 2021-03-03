@@ -21,6 +21,7 @@ function More() {
             갤럭시 팬파티, SK 나이츠 안드로이드 앱 배포 및 유지보수를
             진행하였습니다.
           </p>
+          <Attention>Click Me!</Attention>
         </DetailBox>
         <DetailBox {...refiOS} to="/ios" $detail={false}>
           <p>
@@ -34,6 +35,7 @@ function More() {
             구현할 수 있습니다. ERD 작성을 통해 서버의 모델을 구축할 수 있으며
             데이터 무결성과 검색 비용에 대해 고민합니다.
           </p>
+          <Attention>Click Me!</Attention>
         </DetailBox>
       </LeftBox>
       <RightBox>
@@ -44,20 +46,52 @@ function More() {
             반응형 레이아웃에 대한 이해도가 높습니다. SCSS를 사용하여 화면을
             구현해낼 수 있습니다.
           </p>
+          <Attention>Click Me!</Attention>
         </DetailBox>
-        <DetailBox {...refReact} to="/react" $detail={false}>
+        <DetailBox {...refReact} to="/react" $detail={true}>
           <p>
             Web(React) : 토이 프로젝트를 통해 react를 학습하였으며 axios, styled
-            components, react router, props-type 등의 라이브러리 적용이
-            가능합니다. class component 형태의 Container Presenter 패턴에 대해
+            components, react router, props-type 등의 라이브러리를 사용한 경험이
+            있습니다. class component 형태의 Container Presenter 패턴에 대해
             이해하고 있습니다. 또한 react hook을 이용하여 함수형 component를
             만들어 낼 수 있습니다.
           </p>
+          <Attention>Click Me!</Attention>
         </DetailBox>
       </RightBox>
     </MoreContainer>
   );
 }
+
+const wobble = keyframes`
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+`;
 
 const MoreContainer = styled.div`
   width: 100vw;
@@ -166,6 +200,13 @@ const DetailBox = styled(Link)`
     width: 90%;
     margin-bottom: 55px;
   }
+`;
+
+const Attention = styled.p`
+  position: absolute;
+  bottom: -32px;
+  right: 0;
+  animation: ${wobble} 2s 1s infinite both;
 `;
 
 export default withRouter(More);
