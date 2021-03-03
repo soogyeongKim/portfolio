@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.js": "/portfolio/static/js/main.2a5ce922.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.2a5ce922.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.a9f76519.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.a9f76519.js.map",
+    "static/js/2.94d53de3.chunk.js": "/portfolio/static/js/2.94d53de3.chunk.js",
+    "static/js/2.94d53de3.chunk.js.map": "/portfolio/static/js/2.94d53de3.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/js/2.94d53de3.chunk.js.LICENSE.txt": "/portfolio/static/js/2.94d53de3.chunk.js.LICENSE.txt",
+    "static/media/analytics.214fd3e0.png": "/portfolio/static/media/analytics.214fd3e0.png",
+    "static/media/buskingtown-side@2x.9579be4c.png": "/portfolio/static/media/buskingtown-side@2x.9579be4c.png",
+    "static/media/buskingtown@2x.3148f6c5.png": "/portfolio/static/media/buskingtown@2x.3148f6c5.png",
+    "static/media/buskingtownBg2@2x.d5a4e6ec.png": "/portfolio/static/media/buskingtownBg2@2x.d5a4e6ec.png",
+    "static/media/chatting@2x.473b1096.png": "/portfolio/static/media/chatting@2x.473b1096.png",
+    "static/media/coin.7c75d43d.png": "/portfolio/static/media/coin.7c75d43d.png",
+    "static/media/db-erd@2x.7d4b406e.png": "/portfolio/static/media/db-erd@2x.7d4b406e.png",
+    "static/media/galaxy.4fdb7dd1.png": "/portfolio/static/media/galaxy.4fdb7dd1.png",
+    "static/media/ico-buskingtown@2x.d87ffd7f.png": "/portfolio/static/media/ico-buskingtown@2x.d87ffd7f.png",
+    "static/media/iframe@2x.f18f1303.png": "/portfolio/static/media/iframe@2x.f18f1303.png",
+    "static/media/img-rounding@2x.4078a342.png": "/portfolio/static/media/img-rounding@2x.4078a342.png",
+    "static/media/mac.d9b9c927.jpg": "/portfolio/static/media/mac.d9b9c927.jpg",
+    "static/media/nextrise.1ea2cb5e.jpeg": "/portfolio/static/media/nextrise.1ea2cb5e.jpeg",
+    "static/media/sk-main.a8ba63b1.jpg": "/portfolio/static/media/sk-main.a8ba63b1.jpg",
+    "static/media/sk-qr.dbba9b82.jpg": "/portfolio/static/media/sk-qr.dbba9b82.jpg",
+    "static/media/soo.fc5db68b.jpg": "/portfolio/static/media/soo.fc5db68b.jpg",
+    "static/media/string@2x.4764ff0c.png": "/portfolio/static/media/string@2x.4764ff0c.png",
+    "static/media/viewpager@2x.8d63941a.png": "/portfolio/static/media/viewpager@2x.8d63941a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a9f76519.js",
+    "static/js/2.94d53de3.chunk.js",
+    "static/js/main.2a5ce922.chunk.js"
+  ]
+}
