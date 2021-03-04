@@ -17,7 +17,7 @@ const globalStyles = createGlobalStyle`
         font-family: 'NIXGONM-Vb', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: 1.313rem;
         overflow-x: hidden;
-        word-break: keep-all;
+        margin: 0;
     }
     h1{
         font-size: 2rem;

@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+
 import mainImg from "../assets/soo.jpg";
 
 function Main(props) {
@@ -70,7 +71,7 @@ const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  animation: ${slideIn} 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: ${slideIn} 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 `;
 
 const ProfileImg = styled.img`
