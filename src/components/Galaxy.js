@@ -1,12 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import galaxy from "../assets/galaxy.png";
+import useBlink from "../hooks/useBlink";
 
 function Xsync(props) {
+  const blink = useBlink();
+  const blinkImg = useBlink();
   return (
     <XsyncAppSection>
       <Title>
-        xSync 개별배포 앱 : <Neon>Galaxy Note 10 Fan Party </Neon>(Android)
+        xSync 개별배포 앱 : <Neon {...blink}>Galaxy Note 10 Fan Party </Neon>
+        (Android)
       </Title>
       <XsyncAppContainer>
         <Desc>
@@ -24,7 +28,7 @@ function Xsync(props) {
           <br />
           50%
         </Desc>
-        <Img src={galaxy}></Img>
+        <Img {...blinkImg} src={galaxy}></Img>
         <Desc style={{ textAlign: "left" }}>
           갤럭시 팬파티 어플리케이션은 갤럭시 팬들을 위해 열리는 행사에
           사용되었습니다. 어플리케이션을 통해 행사에 관련된 정보제공을 하며 서버

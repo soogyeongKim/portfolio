@@ -1,13 +1,18 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import styled, { keyframes } from "styled-components";
 
 import mainImg from "../assets/soo.jpg";
 
 function Main(props) {
+  const LazyImage = lazy(() => import("./LazyImage"));
   return (
     <MainSection id="Home">
       <MainContainer>
-        <ProfileImg src={mainImg} />
+        <Suspense fallback={<ProfileImg />}>
+          <ProfileImg>
+            <LazyImage src={mainImg} name={"DD"} />
+          </ProfileImg>
+        </Suspense>
         <ProfileSubText>
           수경스럽다 : [형용사] 업무를 수행하는 모양새가 똑부러지고 믿음직하다.
         </ProfileSubText>
@@ -74,13 +79,14 @@ const MainContainer = styled.div`
   animation: ${slideIn} 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 `;
 
-const ProfileImg = styled.img`
+const ProfileImg = styled.div`
   width: 150px;
   height: 150px;
   margin-bottom: 60px;
   border-radius: 50%;
-  object-fit: cover;
+  background-color: #939393;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 `;
 
 const ProfileTitle = styled.div`

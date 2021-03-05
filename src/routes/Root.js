@@ -3,9 +3,16 @@ import Header from "../components/Header";
 import Main from "../components/Main";
 import More from "../components/More";
 import Contact from "../components/Contact";
+import Loader from "../components/Loader";
+import useLoader from "../hooks/useLoader";
 
 function Root(props) {
-  return (
+  const isLoader = useLoader(10000);
+  return isLoader ? (
+    <>
+      <Loader bgColor="#cca498" />
+    </>
+  ) : (
     <>
       <Header />
       <Main />

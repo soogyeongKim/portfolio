@@ -2,8 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import skMain from "../assets/sk-main.jpg";
 import skQR from "../assets/sk-qr.jpg";
+import useBounce from "../hooks/useBounce";
 
 function SKnights(props) {
+  const bounce = useBounce();
   return (
     <SKnightsSection>
       <Title>xSync 개별배포 앱 : Sk Knights (Android, iOS)</Title>
@@ -38,7 +40,7 @@ function SKnights(props) {
             제작하였습니다.
           </Desc>
         </DescBox>
-        <BackgroundImgBox>
+        <BackgroundImgBox {...bounce}>
           <BackgroundImg src={skMain}></BackgroundImg>
           <BackgroundImg src={skQR}></BackgroundImg>
         </BackgroundImgBox>
@@ -96,7 +98,6 @@ const BackgroundImgBox = styled.div`
 const BackgroundImg = styled.img`
   max-width: 40%;
   object-fit: contain;
-  box-shadow: 5px 7px 5px 1px rgba(0, 0, 0, 0.4);
 `;
 
 const DescBox = styled.div`

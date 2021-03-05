@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 
 function Loader(props) {
   return (
-    <LoaderContainer>
+    <LoaderContainer bgColor={props.bgColor}>
       <Loader4></Loader4>
     </LoaderContainer>
   );
@@ -13,7 +13,7 @@ const LoaderContainer = styled.div`
   width: 100vw;
   height: 100vh;
   text-align: center;
-  background-color: #cca498;
+  background-color: ${(props) => props.bgColor};
   overflow: hidden;
   transition: all 0.2s ease;
 

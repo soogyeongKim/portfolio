@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Highlight from "react-highlight.js";
 import superhook from "../assets/superhook.mov";
 
@@ -9,6 +9,7 @@ function UseHooks() {
       <h1>토이 프로젝트 - Infinite Loading hook, Superhooks! </h1>
       <CoinContainer>
         <CodeBox>
+          <Attention>Scroll Me!</Attention>
           <HighlightCode language="javascript">
             {
               'import React, { useEffect, useState } from "react";\nimport { getMovies } from "./api";\nimport uniqBy from "lodash.uniqby";\nimport ReactDOM from "react-dom";\n\nimport "./styles.css";\n\nfunction InfiniteList() {\n\tconst [movies, setMovies] = useState([]);\n\tconst [loading, setLoading] = useState(true);\n\tconst [page, setPage] = useState(1);\n\n\tconst onScroll = () => {\n\t\tif (isBottom()) {\n\t\t\tsetPage(page + 1);\n\t\t}\n\t};\n\n\tconst isBottom = () => {\n\t\treturn (\n\t\t\tdocument.documentElement.scrollTop +\n\t\t\tdocument.documentElement.clientHeight ===\n\t\t\tdocument.documentElement.scrollHeight\n\t\t);\n\t};\n\n\tconst getFristData = async () => {\n\t\ttry {\n\t\t\tconst { data: { data: { movies } } } = await getMovies(page);\n\t\t\tsetMovies(movies);\n\t\t} catch (e) {\n\t\t\tconsole.log(e);\n\t\t} finally {\n\t\t\tsetLoading(false);\n\t\t}\n\t};\n\n\tconst getMoreData = async () => {\n\t\ttry {\n\t\t\tconst {\n\t\t\t\tdata: {\n\t\t\t\t\tdata: { movies: newMovies },\n\t\t\t\t},\n\t\t\t} = await getMovies(page);\n\t\t\tconst uniqueMovies = [...movies, ...newMovies];\n\t\t\tsetMovies(uniqBy(uniqueMovies, "id"));\n\t\t} catch (e) {\n\t\t\tonsole.log(e);\n\t\t}\n\t};\n\n\tuseEffect(() => {\n\t\tgetFristData();\n\t\twindow.addEventListener("scroll", onScroll);\n\t\treturn () => window.removeEventListener("scroll", onScroll);\n\t}, []);\n\tuseEffect(() => {\n\t\tgetMoreData();\n\t\twindow.addEventListener("scroll", onScroll);\n\t\treturn () => window.removeEventListener("scroll", onScroll);\n\t}, [page]);\n\n\treturn { loading, page, movies };\n}\n\nfunction App() {\n\tconst { loading, page, movies } = InfiniteList();\n\treturn (\n\t\t<div className="App">\n\t\t\t<h1>Infinite Movies / Page {page}</h1>\n\t\t\t{loading && <h3>Loading...</h3>}\n\t\t\t {movies.map((movie) => (\n\t\t\t\t  <h3 key={movie.id}>{movie.title}</h3>\n\t\t\t ))}\n\t\t  </div>\n\t);\n}\nconst rootElement = document.getElementById("root");\nReactDOM.render(<App />, rootElement);'
@@ -57,7 +58,7 @@ const CoinSection = styled.section`
   justify-content: space-between;
 
   & > h1 {
-    margin-bottom: 20px;
+    margin-bottom: 42px;
   }
 `;
 
@@ -73,6 +74,7 @@ const CodeBox = styled.div`
   width: 40%;
   min-height: 60vh;
   font-size: 1rem;
+  position: relative;
 
   & > p {
     margin-bottom: 20px;
@@ -115,4 +117,41 @@ const VideoBox = styled.div`
   }
 `;
 
+const jello = keyframes`
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+`;
+
+const Attention = styled.p`
+  position: absolute;
+  top: -32px;
+  left: 0;
+  animation: ${jello} 5s infinite both;
+`;
 export default UseHooks;
