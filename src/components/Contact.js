@@ -2,25 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 function Contact(props) {
-  // const { values, errors, submitting, handleChange, handleSubmit } = useForm({
-  //   initialValues: { name: "", email: "", contents: "" },
-  //   onSubmit: (values) => {
-  //     console.log(values);
-  //     alert(JSON.stringify(values, null, 2));
-  //   },
-  //   validate,
-  // });
   return (
     <ContactSection id="Contact">
       <ContactContainer>
-        <h1>저의 이야기가 더 궁금하신가요?</h1>
+        <h1>제 이야기가 더 궁금하신가요?</h1>
         <a
-          href="https://github.com/soogyeongKim/react_2weeks/tree/master/changeHooks"
+          href="https://www.notion.so/Kim-SooGyeong-93e53e07cc8b4085ab2327811a8241d9"
           target="_blank"
           rel="noopener noreferrer"
         >
           <LinkP>
-            <Bar>이력서(자기소개서) 구경하러가기</Bar>
+            <Bar>이력서 구경하러가기</Bar>
           </LinkP>
         </a>
         <a
@@ -32,40 +24,6 @@ function Contact(props) {
             <Bar>Github 구경하러가기</Bar>
           </LinkP>
         </a>
-        {/* <p>Mail 보내기</p>
-        <form onSubmit={handleSubmit} noValidate>
-          <input
-            type="text"
-            name="name"
-            value={values.name}
-            onChange={handleChange}
-            className={errors.name && "errorInput"}
-          />
-          {errors.name && <span className="errorMessage">{errors.name}</span>}
-          <input
-            type="email"
-            name="email"
-            value={values.email}
-            onChange={handleChange}
-            className={errors.email && "errorInput"}
-            placeholder="email"
-          />
-          {errors.email && <span className="errorMessage">{errors.email}</span>}
-          <div>
-            <textarea
-              name="contents"
-              value={values.contents}
-              onChange={handleChange}
-              className={errors.contents && "errorInput"}
-            />
-            {errors.contents && (
-              <span className="errorMessage">{errors.contents}</span>
-            )}
-          </div>
-          <button type="submit" disabled={submitting}>
-            보내기
-          </button>
-        </form> */}
       </ContactContainer>
     </ContactSection>
   );
