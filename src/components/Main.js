@@ -10,7 +10,7 @@ function Main(props) {
       <MainContainer>
         <Suspense fallback={<ProfileImg />}>
           <ProfileImg>
-            <LazyImage src={mainImg} name={"DD"} />
+            <LazyImage src={mainImg} name="profileImg" />
           </ProfileImg>
         </Suspense>
         <ProfileSubText>

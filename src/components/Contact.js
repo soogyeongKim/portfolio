@@ -15,6 +15,7 @@ const ContactContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #cca498;
 `;
 
 export default Contact;

@@ -7,7 +7,7 @@ import Loader from "../components/Loader";
 import useLoader from "../hooks/useLoader";
 
 function Root(props) {
-  const isLoader = useLoader(10000);
+  const isLoader = useLoader();
   return isLoader ? (
     <>
       <Loader bgColor="#cca498" />
