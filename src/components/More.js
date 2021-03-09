@@ -10,7 +10,7 @@ function More() {
   const refWeb = useFadein();
   const refReact = useFadein();
   return (
-    <MoreContainer id="More">
+    <MoreContainer id="Skills">
       <Line />
       <LeftBox>
         <DetailBox {...refAndroid} to="/android" $detail={true}>

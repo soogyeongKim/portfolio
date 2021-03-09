@@ -1,8 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React, { lazy, Suspense } from "react";
+import styled, { keyframes } from "styled-components";
 import Coin from "../assets/coin.mov";
 
 function CoinExplorer() {
+  const LazyVideo = lazy(() => import("./LazyVideo"));
   return (
     <CoinSection>
       <h1>
@@ -15,10 +16,10 @@ function CoinExplorer() {
       <CoinContainer>
         <DescBox>
           <p>프로젝트 구조 </p>
-          <p>📁 src</p>
+          <p>📁&nbsp;&nbsp;src</p>
           <ul>
             <List>
-              📁 Components
+              📁&nbsp;&nbsp;Components
               <ul>
                 <List>App.js</List>
                 <List>Coin.js</List>
@@ -30,10 +31,10 @@ function CoinExplorer() {
               </ul>
             </List>
             <List>
-              📁 Routes
+              📁&nbsp;&nbsp;Routes
               <ul>
                 <List>
-                  📁 Markets
+                  📁&nbsp;&nbsp;Markets
                   <ul>
                     <List>MarketsContainer.js</List>
                     <List>MarketsPresenter.js</List>
@@ -43,10 +44,10 @@ function CoinExplorer() {
               </ul>
             </List>
             <List>
-              📁 Screens
+              📁&nbsp;&nbsp;Screens
               <ul>
                 <List>
-                  📁 CoinDetail
+                  📁&nbsp;&nbsp;CoinDetail
                   <ul>
                     <List>CoinDetailContainer.js</List>
                     <List>CoinDetailPresenter.js</List>
@@ -60,14 +61,21 @@ function CoinExplorer() {
           </ul>
         </DescBox>
         <VideoBox>
-          <video
-            src={Coin}
-            alt="실행화면"
-            autoPlay
-            muted
-            loop
-            playsInline
-          ></video>
+          <Suspense
+            fallback={
+              <VideoLoading>
+                <Ripple>
+                  <div />
+                  <div />
+                </Ripple>
+                <p>Loading..</p>
+              </VideoLoading>
+            }
+          >
+            <VideoContent>
+              <LazyVideo src={Coin} />
+            </VideoContent>
+          </Suspense>
           <p>
             <Yellow>암호화폐 관련 정보를 나타내는 React 토이 프로젝트</Yellow>{" "}
             입니다. coinpaprika api를 이용하였습니다. react router 의 match url
@@ -133,13 +141,6 @@ const VideoBox = styled.div`
   width: 60%;
   margin: 0 auto;
 
-  & > video {
-    width: 100%;
-    height: 60vh;
-    border-bottom: 1px solid #10011a;
-    margin-bottom: 20px;
-  }
-
   & > p {
     margin-bottom: 20px;
   }
@@ -150,4 +151,61 @@ const VideoBox = styled.div`
   }
 `;
 
+const VideoContent = styled.div`
+  width: 100%;
+  height: 60vh;
+  border-bottom: 1px solid #10011a;
+  margin-bottom: 20px;
+`;
+
+const VideoLoading = styled.div`
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+  & > p {
+    color: #555;
+    margin-top: 12px;
+  }
+`;
+
+const ripple = keyframes`
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+`;
+
+const Ripple = styled.div`
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+
+  & > div {
+    position: absolute;
+    border: 4px solid #555;
+    opacity: 1;
+    border-radius: 50%;
+    animation: ${ripple} 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+
+    &:nth-child(2) {
+      animation-delay: -0.5s;
+    }
+  }
+`;
 export default CoinExplorer;

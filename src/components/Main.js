@@ -113,6 +113,19 @@ const slideIn = keyframes`
   }
 `;
 
+const slideInBottom = keyframes`
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
 const MainSection = styled.div`
   min-width: 90vw;
   min-height: 100vh;
@@ -194,6 +207,9 @@ const StoryBox = styled.div`
   border-radius: 16px;
   border: 3px solid #444;
   box-shadow: 2px 3px 8px 1px rgba(0, 0, 0, 0.5);
+  -webkit-animation: ${slideInBottom} 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: ${slideInBottom} 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   @media only screen and (max-width: 768px) {
     width: 100%;

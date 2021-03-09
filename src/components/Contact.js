@@ -1,9 +1,17 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import styled from "styled-components";
 
+import sooCard from "../assets/soo-card.jpeg";
+
 function Contact(props) {
+  const LazyImage = lazy(() => import("./LazyImage"));
   return (
-    <ContactSection id="Contact">
+    <ContactSection id="More">
+      <Suspense fallback={<CardImgBox />}>
+        <CardImgBox>
+          <LazyImage src={sooCard} name="cardImg" />
+        </CardImgBox>
+      </Suspense>
       <ContactContainer>
         <h1>제 이야기가 더 궁금하신가요?</h1>
         <a
@@ -42,14 +50,36 @@ const ContactSection = styled.section`
   @media only screen and (max-width: 768px) {
     min-height: calc(100vh - 80px);
     padding-top: 80px;
-    justify-content: start;
-    align-items: start;
+  }
+`;
+
+const CardImgBox = styled.div`
+  width: 20%;
+  height: 20%;
+  margin-bottom: 80px;
+  border-radius: 50%;
+  background-color: #939393;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+
+  @media only screen and (max-width: 768px) {
+    width: 50%;
+    height: 50%;
   }
 `;
 
 const ContactContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
   & > h1 {
     margin-bottom: 50px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+    align-items: center;
   }
 `;
 

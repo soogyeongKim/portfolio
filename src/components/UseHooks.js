@@ -1,9 +1,10 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import styled, { keyframes } from "styled-components";
 import Highlight from "react-highlight.js";
 import superhook from "../assets/superhook.mov";
 
 function UseHooks() {
+  const LazyVideo = lazy(() => import("./LazyVideo"));
   return (
     <CoinSection>
       <h1>토이 프로젝트 - Infinite Loading hook, Superhooks! </h1>
@@ -24,14 +25,21 @@ function UseHooks() {
           </p>
         </CodeBox>
         <VideoBox>
-          <video
-            src={superhook}
-            alt="실행화면"
-            autoPlay
-            muted
-            loop
-            playsInline
-          ></video>
+          <Suspense
+            fallback={
+              <VideoLoading>
+                <Ripple>
+                  <div />
+                  <div />
+                </Ripple>
+                <p>Loading..</p>
+              </VideoLoading>
+            }
+          >
+            <VideoContent>
+              <LazyVideo src={superhook} />
+            </VideoContent>
+          </Suspense>
           <p>(Superhooks)</p>
           <p>다양한 Web API를 활용하여 8개의 react hook을 만들었습니다.</p>
           <p>
@@ -99,12 +107,6 @@ const HighlightCode = styled(Highlight)`
 const VideoBox = styled.div`
   width: 40%;
   height: 60vh;
-  background-color: #cca498;
-
-  & > video {
-    width: 100%;
-    height: 60vh;
-  }
 
   & > p {
     margin-bottom: 20px;
@@ -114,6 +116,63 @@ const VideoBox = styled.div`
     width: 100%;
     height: auto;
     background-color: transparent;
+  }
+`;
+
+const VideoContent = styled.div`
+  width: 100%;
+  height: 60vh;
+`;
+
+const VideoLoading = styled.div`
+  width: 100%;
+  height: 60vh;
+  background-color: #cca498;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+  & > p {
+    color: #fff;
+    margin-top: 12px;
+  }
+`;
+
+const ripple = keyframes`
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+`;
+
+const Ripple = styled.div`
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+
+  & > div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: ${ripple} 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+
+    &:nth-child(2) {
+      animation-delay: -0.5s;
+    }
   }
 `;
 

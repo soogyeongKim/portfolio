@@ -19,22 +19,22 @@ function Header({ location: { hash } }) {
         </Item>
         <Item>
           <NavLink
+            to="/#Skills"
+            activeClassName="selected"
+            activeStyle={{ borderBottom: "2px solid #3498db" }}
+            smooth
+          >
+            Skills
+          </NavLink>
+        </Item>
+        <Item>
+          <NavLink
             to="/#More"
             activeClassName="selected"
             activeStyle={{ borderBottom: "2px solid #3498db" }}
             smooth
           >
             More
-          </NavLink>
-        </Item>
-        <Item>
-          <NavLink
-            to="/#Contact"
-            activeClassName="selected"
-            activeStyle={{ borderBottom: "2px solid #3498db" }}
-            smooth
-          >
-            Contact
           </NavLink>
         </Item>
       </List>
