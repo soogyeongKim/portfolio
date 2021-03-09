@@ -1,0 +1,2 @@
+(this.webpackJsonpportfolio=this.webpackJsonpportfolio||[]).push([[0],{228:function(t,c,n){"use strict";n.r(c);var o,e=n(3),i=(n(2),n(1)),r=n(0),s=i.c.img(o||(o=Object(e.a)(["\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n"])));c.default=function(t){return Object(r.jsx)(s,{src:t.src,alt:t.name})}}}]);
+//# sourceMappingURL=0.b5490bea.chunk.js.map

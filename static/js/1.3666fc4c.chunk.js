@@ -1,0 +1,2 @@
+(this.webpackJsonpportfolio=this.webpackJsonpportfolio||[]).push([[1],{229:function(t,o,n){"use strict";n.r(o);var i,c=n(3),e=(n(2),n(1)),s=n(0),a=e.c.video(i||(i=Object(c.a)(["\n  width: 100%;\n  height: 100%;\n  object-fit: contain;\n"])));o.default=function(t){return Object(s.jsx)(a,{src:t.src,alt:"\uc2e4\ud589\ud654\uba74",autoPlay:!0,muted:!0,loop:!0,playsInline:!0})}}}]);
+//# sourceMappingURL=1.3666fc4c.chunk.js.map

@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.4452eba0.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.4452eba0.chunk.js.map",
-    "runtime-main.js": "/portfolio/static/js/runtime-main.491a128d.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.491a128d.js.map",
-    "static/js/2.c773426a.chunk.js": "/portfolio/static/js/2.c773426a.chunk.js",
-    "static/js/2.c773426a.chunk.js.map": "/portfolio/static/js/2.c773426a.chunk.js.map",
-    "static/js/3.cbd29d00.chunk.js": "/portfolio/static/js/3.cbd29d00.chunk.js",
-    "static/js/3.cbd29d00.chunk.js.map": "/portfolio/static/js/3.cbd29d00.chunk.js.map",
+    "static/js/0.b5490bea.chunk.js": "/portfolio/static/js/0.b5490bea.chunk.js",
+    "static/js/0.b5490bea.chunk.js.map": "/portfolio/static/js/0.b5490bea.chunk.js.map",
+    "static/js/1.3666fc4c.chunk.js": "/portfolio/static/js/1.3666fc4c.chunk.js",
+    "static/js/1.3666fc4c.chunk.js.map": "/portfolio/static/js/1.3666fc4c.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.8544b491.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.8544b491.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.f50e3f62.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.f50e3f62.js.map",
+    "static/js/4.5aa96f15.chunk.js": "/portfolio/static/js/4.5aa96f15.chunk.js",
+    "static/js/4.5aa96f15.chunk.js.map": "/portfolio/static/js/4.5aa96f15.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/js/2.c773426a.chunk.js.LICENSE.txt": "/portfolio/static/js/2.c773426a.chunk.js.LICENSE.txt",
+    "static/js/4.5aa96f15.chunk.js.LICENSE.txt": "/portfolio/static/js/4.5aa96f15.chunk.js.LICENSE.txt",
     "static/media/analytics.214fd3e0.png": "/portfolio/static/media/analytics.214fd3e0.png",
     "static/media/buskingtown-side@2x.9579be4c.png": "/portfolio/static/media/buskingtown-side@2x.9579be4c.png",
     "static/media/buskingtown@2x.3148f6c5.png": "/portfolio/static/media/buskingtown@2x.3148f6c5.png",
@@ -25,14 +27,15 @@
     "static/media/nextrise.1ea2cb5e.jpeg": "/portfolio/static/media/nextrise.1ea2cb5e.jpeg",
     "static/media/sk-main.a8ba63b1.jpg": "/portfolio/static/media/sk-main.a8ba63b1.jpg",
     "static/media/sk-qr.dbba9b82.jpg": "/portfolio/static/media/sk-qr.dbba9b82.jpg",
+    "static/media/soo-card.58b87c7e.jpeg": "/portfolio/static/media/soo-card.58b87c7e.jpeg",
     "static/media/soo.7633e529.jpg": "/portfolio/static/media/soo.7633e529.jpg",
     "static/media/string@2x.4764ff0c.png": "/portfolio/static/media/string@2x.4764ff0c.png",
     "static/media/superhook.8107d0c7.mov": "/portfolio/static/media/superhook.8107d0c7.mov",
     "static/media/viewpager@2x.8d63941a.png": "/portfolio/static/media/viewpager@2x.8d63941a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.491a128d.js",
-    "static/js/2.c773426a.chunk.js",
-    "static/js/main.4452eba0.chunk.js"
+    "static/js/runtime-main.f50e3f62.js",
+    "static/js/4.5aa96f15.chunk.js",
+    "static/js/main.8544b491.chunk.js"
   ]
 }
