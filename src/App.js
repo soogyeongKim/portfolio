@@ -15,7 +15,6 @@ function App() {
   useEffect(() => {
     window.addEventListener("beforeunload", listener);
   });
-  console.log("!!");
   return (
     <Router>
       <Route exact path="/" component={Root} />

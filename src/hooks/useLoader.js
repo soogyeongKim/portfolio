@@ -13,7 +13,7 @@ const useLoader = () => {
       localStorage.getItem("firstVisit") === "true"
     ) {
       setIsLoader(true);
-      setTimeout(() => setIsLoader(false), 8000);
+      setTimeout(() => setIsLoader(false), 6000);
     } else {
       setIsLoader(false);
     }
